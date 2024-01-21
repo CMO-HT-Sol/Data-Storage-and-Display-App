@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+       form{
+    border: 1px solid black;
+    display: grid;
+    width: 500px;
+    padding: 10px;
+    margin-left: 520px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 25px -5px rgb(111, 158, 160);
+    border: none;
+    margin-top: 50px;
+    background-color: rgb(25, 165, 165);
+    
+
+}
+h1{
+    color: rgb(0, 0, 0);
+    text-align: center;
+    margin-top: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+input{
+    padding: 10px;
+    margin: 10px;
+    border-radius: 6px;
+    border: none;
+    background-color: rgb(255, 255, 255);
+}
+button{
+    width: 150px;
+    text-align: center;
+    padding: 6px;
+    margin-left: 180px;
+    cursor: pointer;
+    transition: 0.5s;
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    border: none;
+}
+button:hover{
+    background-color: rgb(0, 255, 255);
+}
+   </style>
+</head>
+<body>
+    <h1>Data Storage and Display</h1>
+    <form>
+        <input type="text" id="name" placeholder="Enter your name">
+        <input type="text" id="fathername" placeholder="Enter your father name">
+        <input type="text" id="hobby" placeholder="Enter your hobby">
+        <input type="date" id="date" placeholder="Enter date">
+        <button type="button" onclick="CheckData()" >Check</button>
+        <p id="result"></p>
+
+    </form>
+
+    <script>
+        function OutlineData() {
+    var name = document.getElementById("name").value;
+    var fathername = document.getElementById("fathername").value;
+    var hobby = document.getElementById("hobby").value;
+    var date = document.getElementById("date").value;
+    var UserData = "<b>Name :<b>" + name + "<br><b>Father Name :<b>" + fathername + "<br><b>Hobby :<b>" + hobby + "<br><b>date :<b>" + date;
+    return UserData;
+}
+
+function CheckData() {
+    UserData = OutlineData();
+    document.getElementById("result").innerHTML = UserData;
+    document.getElementById("result").style.border = "1px solid blue";
+    document.getElementById("result").style.padding = "10px";
+    document.getElementById("result").style.color = "white";
+}
+    </script>
+</body>
+</html>
